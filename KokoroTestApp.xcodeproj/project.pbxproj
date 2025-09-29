@@ -37,6 +37,7 @@
 		5247E6892E8A5478003F2FA4 = {
 			isa = PBXGroup;
 			children = (
+				52CA91A42E8A6C7800C7951A /* Resources */,
 				5247E6942E8A5479003F2FA4 /* KokoroTestApp */,
 				5247E6932E8A5478003F2FA4 /* Products */,
 			);
@@ -48,6 +49,13 @@
 				5247E6922E8A5478003F2FA4 /* KokoroTestApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		52CA91A42E8A6C7800C7951A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
