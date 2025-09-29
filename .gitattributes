@@ -1,0 +1,1 @@
+Resources/kokoro-v1_0.safetensors filter=lfs diff=lfs merge=lfs -text
