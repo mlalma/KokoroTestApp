@@ -12,7 +12,8 @@ class TestAppModel: ObservableObject {
   let playerNode: AVAudioPlayerNode!
 
   init() {
-    kokoroTTSEngine = KokoroTTS()
+    let modelPath = Bundle.main.url(forResource: "kokoro-v1_0", withExtension: "safetensors")!    
+    kokoroTTSEngine = KokoroTTS(modelPath: modelPath)
     audioEngine = AVAudioEngine()
     playerNode = AVAudioPlayerNode()
     audioEngine.attach(playerNode)  

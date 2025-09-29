@@ -7,7 +7,7 @@
       "location" : "https://github.com/mlalma/kokoro-ios",
       "state" : {
         "branch" : "make-this-repo-to-be-a-spm-package",
-        "revision" : "d381657104bc4cdb20f3b8e194961d4d9d027a2f"
+        "revision" : "58740fc234eb051fffbb8451203b924caeee6ee6"
       }
     },
     {
