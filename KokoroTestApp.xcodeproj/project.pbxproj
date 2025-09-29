@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		529DABC22E8A590500E62DBC /* KokoroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 529DABC12E8A590500E62DBC /* KokoroSwift */; };
+		52CA91A62E8A6D4D00C7951A /* kokoro-v1_0.safetensors in Resources */ = {isa = PBXBuildFile; fileRef = 52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5247E6922E8A5478003F2FA4 /* KokoroTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KokoroTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kokoro-v1_0.safetensors"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -54,6 +56,7 @@
 		52CA91A42E8A6C7800C7951A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CA91A62E8A6D4D00C7951A /* kokoro-v1_0.safetensors in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
