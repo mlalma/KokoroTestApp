@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mlalma/kokoro-ios",
       "state" : {
-        "branch" : "make-this-repo-to-be-a-spm-package",
-        "revision" : "58740fc234eb051fffbb8451203b924caeee6ee6"
+        "revision" : "7f6c9c216d0ad63c994799df0193b98c4580bc74",
+        "version" : "1.0.0"
       }
     },
     {

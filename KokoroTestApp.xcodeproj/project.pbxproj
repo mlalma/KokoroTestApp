@@ -375,8 +375,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mlalma/kokoro-ios";
 			requirement = {
-				branch = "make-this-repo-to-be-a-spm-package";
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
