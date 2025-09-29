@@ -1,0 +1,42 @@
+{
+  "originHash" : "1a7372b94f4cffe2b3559d8c7ba0d1dc2f327418b055f3bb4c8e02171574b094",
+  "pins" : [
+    {
+      "identity" : "kokoro-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mlalma/kokoro-ios",
+      "state" : {
+        "branch" : "make-this-repo-to-be-a-spm-package",
+        "revision" : "d381657104bc4cdb20f3b8e194961d4d9d027a2f"
+      }
+    },
+    {
+      "identity" : "misakiswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mlalma/MisakiSwift",
+      "state" : {
+        "revision" : "cddad14f2a457d8ee4a2a7ae940851a7ce4aa4ca",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "mlx-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ml-explore/mlx-swift",
+      "state" : {
+        "revision" : "96c0f69cf15f38abd6248bb71fca908171dab1d8",
+        "version" : "0.25.6"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
