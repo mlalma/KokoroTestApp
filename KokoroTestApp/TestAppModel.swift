@@ -47,8 +47,13 @@ class TestAppModel: ObservableObject {
 
     buffer.frameLength = buffer.frameCapacity
     let channels = buffer.floatChannelData!
-    for i in 0 ..< audio.count {
-      channels[0][i] = audio[i]
+    let dst: UnsafeMutablePointer<Float> = channels[0]
+    audio.withUnsafeBufferPointer { buf in
+        precondition(buf.baseAddress != nil)
+        let byteCount = buf.count * MemoryLayout<Float>.stride
+
+        UnsafeMutableRawPointer(dst)
+          .copyMemory(from: UnsafeRawPointer(buf.baseAddress!), byteCount: byteCount)
     }
 
     audioEngine.connect(playerNode, to: audioEngine.mainMixerNode, format: format)
