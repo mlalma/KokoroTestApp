@@ -1,13 +1,13 @@
 {
-  "originHash" : "1a7372b94f4cffe2b3559d8c7ba0d1dc2f327418b055f3bb4c8e02171574b094",
+  "originHash" : "37c0952def8377b65acc23bd6f144a1bfc4469b28eff17a2bb545fe6d03e22c1",
   "pins" : [
     {
       "identity" : "kokoro-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mlalma/kokoro-ios",
       "state" : {
-        "revision" : "7f6c9c216d0ad63c994799df0193b98c4580bc74",
-        "version" : "1.0.0"
+        "revision" : "088aa976394395ba356e87181424d49b522d242d",
+        "version" : "1.0.3"
       }
     },
     {
@@ -29,12 +29,30 @@
       }
     },
     {
+      "identity" : "mlxutilslibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mlalma/MLXUtilsLibrary.git",
+      "state" : {
+        "revision" : "15074d058069c8c935a8946f401486c03de8dc31",
+        "version" : "0.0.2"
+      }
+    },
+    {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-numerics",
       "state" : {
         "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
         "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "22787ffb59de99e5dc1fbfe80b19c97a904ad48d",
+        "version" : "0.9.20"
       }
     }
   ],

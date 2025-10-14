@@ -3,13 +3,16 @@ import MLX
 import SwiftUI
 import KokoroSwift
 import Combine
+import MLXUtilsLibrary
 
-class TestAppModel: ObservableObject {
-  var objectWillChange: ObservableObjectPublisher
-  
+class TestAppModel: ObservableObject {  
   let kokoroTTSEngine: KokoroTTS!
   let audioEngine: AVAudioEngine!
   let playerNode: AVAudioPlayerNode!
+  let voices: [String: MLXArray]
+  
+  @Published var voiceNames: [String] = []
+  @Published var selectedVoice: String = ""
 
   init() {
     let modelPath = Bundle.main.url(forResource: "kokoro-v1_0", withExtension: "safetensors")!    
@@ -17,7 +20,11 @@ class TestAppModel: ObservableObject {
     audioEngine = AVAudioEngine()
     playerNode = AVAudioPlayerNode()
     audioEngine.attach(playerNode)  
-    objectWillChange = ObservableObjectPublisher()
+    
+    let voiceFilePath = Bundle.main.url(forResource: "voices", withExtension: "npz")!
+    voices = NpyzReader.read(fileFromPath: voiceFilePath) ?? [:]
+    voiceNames = voices.keys.map { String($0.split(separator: ".")[0]) }.sorted(by: <)
+    selectedVoice = voiceNames[0]
 
     #if os(iOS)
       do {
@@ -32,7 +39,7 @@ class TestAppModel: ObservableObject {
   }
 
   func say(_ text: String) {
-    let audio = try! kokoroTTSEngine.generateAudio(voice: .afHeart, language: .enUS, text: text)
+    let audio = try! kokoroTTSEngine.generateAudio(voice: voices[selectedVoice + ".npy"]!, language: selectedVoice.first! == "a" ? .enUS : .enGB, text: text)
     
     let sampleRate = Double(KokoroTTS.Constants.samplingRate)
     let audioLength = Double(audio.count) / sampleRate

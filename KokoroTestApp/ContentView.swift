@@ -14,6 +14,20 @@ struct ContentView: View {
         .cornerRadius(8)
         .padding(.horizontal)
 
+      Picker("Selected Voice: ", selection: $viewModel.selectedVoice) {
+        ForEach(viewModel.voiceNames, id: \.self) { voice in
+          Text(voice)
+            .foregroundStyle(Color.black)
+            .tag(voice)
+        }
+      }
+      .accentColor(.black)
+      .foregroundColor(.black)
+      .pickerStyle(.menu)
+      .padding(.horizontal)
+      .tint(.accentColor)
+      .background(.gray)
+      
       Button {
         if !inputText.isEmpty {
           viewModel.say(inputText)
@@ -29,12 +43,11 @@ struct ContentView: View {
           Spacer()
         }
         .background(.black)
-        .padding()
+        .padding(.horizontal)
       }
 
       Spacer()
     }
-    .padding()
     .background(.white)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
