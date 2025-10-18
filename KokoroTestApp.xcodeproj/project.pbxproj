@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		529DABC22E8A590500E62DBC /* KokoroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 529DABC12E8A590500E62DBC /* KokoroSwift */; };
 		52CA91A62E8A6D4D00C7951A /* kokoro-v1_0.safetensors in Resources */ = {isa = PBXBuildFile; fileRef = 52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */; };
+		52E385B12E9EDA6800B10D6C /* MLXUtilsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 52E385B02E9EDA6800B10D6C /* MLXUtilsLibrary */; };
+		52E385B32E9EDABD00B10D6C /* voices.npz in Resources */ = {isa = PBXBuildFile; fileRef = 52E385B22E9EDABD00B10D6C /* voices.npz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5247E6922E8A5478003F2FA4 /* KokoroTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KokoroTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kokoro-v1_0.safetensors"; sourceTree = "<group>"; };
+		52E385B22E9EDABD00B10D6C /* voices.npz */ = {isa = PBXFileReference; lastKnownFileType = file; path = voices.npz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E385B12E9EDA6800B10D6C /* MLXUtilsLibrary in Frameworks */,
 				529DABC22E8A590500E62DBC /* KokoroSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +60,7 @@
 		52CA91A42E8A6C7800C7951A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52E385B22E9EDABD00B10D6C /* voices.npz */,
 				52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */,
 			);
 			path = Resources;
@@ -82,6 +87,7 @@
 			name = KokoroTestApp;
 			packageProductDependencies = (
 				529DABC12E8A590500E62DBC /* KokoroSwift */,
+				52E385B02E9EDA6800B10D6C /* MLXUtilsLibrary */,
 			);
 			productName = KokoroTestApp;
 			productReference = 5247E6922E8A5478003F2FA4 /* KokoroTestApp.app */;
@@ -113,6 +119,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				529DABC02E8A590500E62DBC /* XCRemoteSwiftPackageReference "kokoro-ios" */,
+				52E385AF2E9EDA6800B10D6C /* XCRemoteSwiftPackageReference "MLXUtilsLibrary" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5247E6932E8A5478003F2FA4 /* Products */;
@@ -129,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E385B32E9EDABD00B10D6C /* voices.npz in Resources */,
 				52CA91A62E8A6D4D00C7951A /* kokoro-v1_0.safetensors in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +387,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		52E385AF2E9EDA6800B10D6C /* XCRemoteSwiftPackageReference "MLXUtilsLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mlalma/MLXUtilsLibrary.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -386,6 +402,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 529DABC02E8A590500E62DBC /* XCRemoteSwiftPackageReference "kokoro-ios" */;
 			productName = KokoroSwift;
+		};
+		52E385B02E9EDA6800B10D6C /* MLXUtilsLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52E385AF2E9EDA6800B10D6C /* XCRemoteSwiftPackageReference "MLXUtilsLibrary" */;
+			productName = MLXUtilsLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

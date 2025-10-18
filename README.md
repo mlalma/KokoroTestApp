@@ -1,5 +1,7 @@
 # KokoroTestApp
 
+✨ *New:* Voice styles are moved out of the library to the integrating application. The application provides now 28 different voice styles that can be used to generate speech.
+
 A SwiftUI test application for the Kokoro TTS (Text-to-Speech) model, demonstrating high-quality faster than real-time neural speech synthesis on macOS and iOS using Apple's MLX framework.
 
 ## Supported Platforms
@@ -52,10 +54,10 @@ Otherwise cloning and running the application is done as any other app:
 
 This project uses Swift Package Manager with the following dependencies:
 
-- **[kokoro-ios](https://github.com/mlalma/kokoro-ios)**: Kokoro TTS Swift wrapper
-- **[mlx-swift](https://github.com/ml-explore/mlx-swift)**: Apple's MLX machine learning framework
-- **[MisakiSwift](https://github.com/mlalma/MisakiSwift)**: Additional utilities
-- **[swift-numerics](https://github.com/apple/swift-numerics)**: Numerical computing support
+- [Kokoro iOS](https://github.com/mlalma/kokoro-ios): Kokoro TTS engine
+- [MLX](https://github.com/ml-explore/mlx-swift): Apple's MLX machine learning framework
+- [MisakiSwift](https://github.com/mlalma/MisakiSwift): Misaki G2P library
+- [MLXUtilsLibrary](https://github.com/mlalma/MLXUtilsLibrary): For reading the .npz file for voice styles
 
 ## License
 
