@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mlalma/kokoro-ios",
       "state" : {
-        "revision" : "5a6912c1a9ba417400afa7865db7e9d68c8ddcf5",
-        "version" : "1.0.7"
+        "revision" : "cd7f5f385b44d03904995a47bd193cba2913cac7",
+        "version" : "1.0.8"
       }
     },
     {
