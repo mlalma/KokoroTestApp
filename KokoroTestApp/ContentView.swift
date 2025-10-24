@@ -53,6 +53,11 @@ struct ContentView: View {
         .padding(.horizontal)
       }
 
+      Text("Spoken string: " + viewModel.stringToFollowTheAudio)
+        .padding()
+        .foregroundStyle(.black)
+        .background(.white)
+      
       Spacer()
     }
     .background(.white)

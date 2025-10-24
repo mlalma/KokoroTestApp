@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		529DABC22E8A590500E62DBC /* KokoroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 529DABC12E8A590500E62DBC /* KokoroSwift */; };
 		52CA91A62E8A6D4D00C7951A /* kokoro-v1_0.safetensors in Resources */ = {isa = PBXBuildFile; fileRef = 52CA91A52E8A6D4D00C7951A /* kokoro-v1_0.safetensors */; };
-		52E385B12E9EDA6800B10D6C /* MLXUtilsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 52E385B02E9EDA6800B10D6C /* MLXUtilsLibrary */; };
 		52E385B32E9EDABD00B10D6C /* voices.npz in Resources */ = {isa = PBXBuildFile; fileRef = 52E385B22E9EDABD00B10D6C /* voices.npz */; };
+		52FE05A02EAA89F50018FCF1 /* KokoroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52FE059F2EAA89F50018FCF1 /* KokoroSwift */; };
+		52FE05A32EAA8A200018FCF1 /* MLXUtilsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 52FE05A22EAA8A200018FCF1 /* MLXUtilsLibrary */; };
+		52FE05CE2EAA938B0018FCF1 /* MisakiSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52FE05CD2EAA938B0018FCF1 /* MisakiSwift */; };
+		52FE05F12EABBB5A0018FCF1 /* KokoroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52FE05F02EABBB5A0018FCF1 /* KokoroSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E385B12E9EDA6800B10D6C /* MLXUtilsLibrary in Frameworks */,
-				529DABC22E8A590500E62DBC /* KokoroSwift in Frameworks */,
+				52FE05A32EAA8A200018FCF1 /* MLXUtilsLibrary in Frameworks */,
+				52FE05F12EABBB5A0018FCF1 /* KokoroSwift in Frameworks */,
+				52FE05A02EAA89F50018FCF1 /* KokoroSwift in Frameworks */,
+				52FE05CE2EAA938B0018FCF1 /* MisakiSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,8 +90,10 @@
 			);
 			name = KokoroTestApp;
 			packageProductDependencies = (
-				529DABC12E8A590500E62DBC /* KokoroSwift */,
-				52E385B02E9EDA6800B10D6C /* MLXUtilsLibrary */,
+				52FE059F2EAA89F50018FCF1 /* KokoroSwift */,
+				52FE05A22EAA8A200018FCF1 /* MLXUtilsLibrary */,
+				52FE05CD2EAA938B0018FCF1 /* MisakiSwift */,
+				52FE05F02EABBB5A0018FCF1 /* KokoroSwift */,
 			);
 			productName = KokoroTestApp;
 			productReference = 5247E6922E8A5478003F2FA4 /* KokoroTestApp.app */;
@@ -118,8 +124,7 @@
 			mainGroup = 5247E6892E8A5478003F2FA4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				529DABC02E8A590500E62DBC /* XCRemoteSwiftPackageReference "kokoro-ios" */,
-				52E385AF2E9EDA6800B10D6C /* XCRemoteSwiftPackageReference "MLXUtilsLibrary" */,
+				52FE05EF2EABBB5A0018FCF1 /* XCRemoteSwiftPackageReference "kokoro-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5247E6932E8A5478003F2FA4 /* Products */;
@@ -379,34 +384,33 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		529DABC02E8A590500E62DBC /* XCRemoteSwiftPackageReference "kokoro-ios" */ = {
+		52FE05EF2EABBB5A0018FCF1 /* XCRemoteSwiftPackageReference "kokoro-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mlalma/kokoro-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		52E385AF2E9EDA6800B10D6C /* XCRemoteSwiftPackageReference "MLXUtilsLibrary" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mlalma/MLXUtilsLibrary.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 1.0.7;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		529DABC12E8A590500E62DBC /* KokoroSwift */ = {
+		52FE059F2EAA89F50018FCF1 /* KokoroSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 529DABC02E8A590500E62DBC /* XCRemoteSwiftPackageReference "kokoro-ios" */;
 			productName = KokoroSwift;
 		};
-		52E385B02E9EDA6800B10D6C /* MLXUtilsLibrary */ = {
+		52FE05A22EAA8A200018FCF1 /* MLXUtilsLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52E385AF2E9EDA6800B10D6C /* XCRemoteSwiftPackageReference "MLXUtilsLibrary" */;
 			productName = MLXUtilsLibrary;
+		};
+		52FE05CD2EAA938B0018FCF1 /* MisakiSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MisakiSwift;
+		};
+		52FE05F02EABBB5A0018FCF1 /* KokoroSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52FE05EF2EABBB5A0018FCF1 /* XCRemoteSwiftPackageReference "kokoro-ios" */;
+			productName = KokoroSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

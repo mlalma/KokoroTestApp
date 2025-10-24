@@ -28,6 +28,10 @@ final class TestAppModel: ObservableObject {
   
   /// The currently selected voice name
   @Published var selectedVoice: String = ""
+  
+  @Published var stringToFollowTheAudio: String = ""
+  
+  var timer: Timer?
 
   /// Initializes the test app model with TTS engine, audio components, and voice data.
   init() {
@@ -65,7 +69,13 @@ final class TestAppModel: ObservableObject {
   func say(_ text: String) {
     // Generate audio using the selected voice
     // Language is determined by voice name: 'a' prefix = US English, otherwise GB English
-    let audio = try! kokoroTTSEngine.generateAudio(voice: voices[selectedVoice + ".npy"]!, language: selectedVoice.first! == "a" ? .enUS : .enGB, text: text)
+    let (audio, tokenArray) = try! kokoroTTSEngine.generateAudio(voice: voices[selectedVoice + ".npy"]!, language: selectedVoice.first! == "a" ? .enUS : .enGB, text: text)
+    
+    if let tokenArray {
+      for t in tokenArray {
+        print("\(t.text): \(t.start_ts, default: "UNK") - \(t.end_ts, default: "UNK")")
+      }
+    }
     
     // Calculate audio length and performance metrics
     let sampleRate = Double(KokoroTTS.Constants.samplingRate)
@@ -111,5 +121,34 @@ final class TestAppModel: ObservableObject {
     // Schedule and play the audio buffer
     playerNode.scheduleBuffer(buffer, at: nil, options: .interrupts, completionHandler: nil)
     playerNode.play()
+    
+    if let tokenArray {
+      stringToFollowTheAudio = ""
+      var currentToken = 0
+      var audioTime: Double = 0.0
+      var added = false
+      
+      timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
+        guard let self else { return }
+        audioTime += 0.1
+        
+        guard currentToken < tokenArray.count else {
+          timer.invalidate()
+          return
+        }
+        
+        let token = tokenArray[currentToken]
+                
+        if !added, let start = token.start_ts, start < audioTime {
+          stringToFollowTheAudio += token.text + (token.whitespace.isEmpty ? "" : " ")
+          added = true
+        }
+        
+        if let end = token.end_ts, audioTime >= end {
+          currentToken += 1
+          added = false
+        }
+      }
+    }
   }
 }
